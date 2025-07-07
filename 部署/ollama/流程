@@ -1,0 +1,13 @@
+1.下载ollama：学术加速，然后curl -fsSL https://ollama.com/install.sh | sh，下载完成。
+
+2.配置ollama文件：把配置粘贴到profile文件中。首先在终端执行vim /etc/profile ，点击i，粘贴后esc，然后冒号，再输入wq退出。然后source /etc/profile 激活环境。
+
+3.开启ollama服务，然后下载模型。然后可直接进行对话。
+
+4.如果要关闭思考，就是在每次输入后面都要加上/no_think。
+
+5.调用多卡(单卡与cpu会自动识别)：像配置文件一样配置多卡设置。最重要的就是gpu数量和下面的visible_devices数量要一致。指定激活设备可以通过设置visible_devices的标号实现。
+
+6.Openai调用：同样先在终端挂载本地，在控制台服务器界面，记得把第一个6006改为8000，然后在vscode运行代码。
+
+7.Openai webui调用：首先要在profile配置文件中修改端口6006为11434。
