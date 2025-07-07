@@ -13,13 +13,19 @@
 
 7.Openai webui调用：首先要在profile配置文件中修改端口6006为11434。
 
+
+部署完毕后出现了model文件夹，里面有qwen3：8b。
+
+
 #ollama 部署本地的大模型
 1.下载llama.cpp（github拉取），进入llama.cpp文件夹终端下载环境。
 
 2.量化模型（把本地下载的模型转化为gguf格式，后续再把gguf格式文件转化为ollama能识别的文件）。
 
 3.得到gguf格式后进入llama.cpp终端，使用vim ModelFile，然后配置文件，可以让ollama识别我们的gguf文件在哪。
+gguf文件在我们自创的qwen文件夹中，因为ModelFile中配置了FROM /root/autodl-tmp/Qwen/qwen3_8b_q8_0.gguf。
 
 4.打开ollama服务，通过ollama create midori --file ./ModelFile可以把gguf文件部署到ollama。
+得到的ollama可以识别的文件qwen3-8b-q8在model文件夹，里面有qwen3：8b和新加的量化文件。
 
 5.可以使用ollama list查看有哪些模型，使用ollama run 模型名来运行模型。
