@@ -2,6 +2,12 @@
 
 在modelscope里找到模型，使用sdk部署，在服务器中创建download.py文件，复制sdk指令，cache_dir设置路径，运行。
 
-下载完毕后，尝试使用一下，可以使用网页端进行对话，也可以在终端进行对话。使用git clone下载qwen3的项目文件（区分模型文件），然后打开魔搭模型页面的尝试代码，创建test.py，修改模型地址，torch dtype=torch.bfloat16,device_map="cuda"。
+下载完毕后，使用git clone下载qwen3的项目文件（区分模型文件），然后打开魔搭模型页面的尝试代码，创建test.py，修改模型地址，torch dtype=torch.bfloat16,device_map="cuda"。
 
-直接使用test.py则只会输出一个回答（基于代码里你设置的prompt）
+直接使用test.py则只会输出一个回答（基于代码里你设置的prompt）。
+
+可以使用网页端进行对话，也可以在终端进行对话（模型项目文件的examples/demo提供了两种方式）。
+
+1.使用网页端：web_demo修改模型路径，然后server--port改为6006（autodl只支持6006），运行后，使用控制台所用服务器的自定义服务，下载后打开工具，输入登陆指令和密码，，开始代理后打开网址即可打开网页。 
+
+2.终端：cli_demo,修改路径后可在终端对话，显示思考流程。
