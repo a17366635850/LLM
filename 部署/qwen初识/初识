@@ -1,0 +1,7 @@
+使用autodl服务器部署qwen3-8b。
+
+在modelscope里找到模型，使用sdk部署，在服务器中创建download.py文件，复制sdk指令，cache_dir设置路径，运行。
+
+下载完毕后，尝试使用一下，可以使用网页端进行对话，也可以在终端进行对话。使用git clone下载qwen3的项目文件（区分模型文件），然后打开魔搭模型页面的尝试代码，创建test.py，修改模型地址，torch dtype=torch.bfloat16,device_map="cuda"。
+
+直接使用test.py则只会输出一个回答（基于代码里你设置的prompt）
