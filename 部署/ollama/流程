@@ -1,3 +1,4 @@
+#ollama 官网拉取
 1.下载ollama：学术加速，然后curl -fsSL https://ollama.com/install.sh | sh，下载完成。
 
 2.配置ollama文件：把配置粘贴到profile文件中。首先在终端执行vim /etc/profile ，点击i，粘贴后esc，然后冒号，再输入wq退出。然后source /etc/profile 激活环境。
@@ -11,3 +12,5 @@
 6.Openai调用：同样先在终端挂载本地，在控制台服务器界面，记得把第一个6006改为8000，然后在vscode运行代码。
 
 7.Openai webui调用：首先要在profile配置文件中修改端口6006为11434。
+
+#ollama 部署本地的大模型
